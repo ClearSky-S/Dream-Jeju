@@ -26,7 +26,6 @@ function setUserName() {
 
 myButton.onclick = setUserName;
 
-
 if(!localStorage.getItem('name')) {
     setUserName();
   } else {
