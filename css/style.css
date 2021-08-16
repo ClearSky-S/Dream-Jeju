@@ -17,7 +17,7 @@ ul {
 #container {
     margin: 0 auto;
     width: 1200px;
-    background: cadetblue;
+    /* background: cadetblue; */
 }
 
 /* HEADER */
@@ -80,19 +80,20 @@ nav {
     text-shadow: 0 -1px #07c;
 }
 
-#topMenu > li > ul {
+#topMenu>li>ul {
     display: none;
     position: absolute;
     width: 160px;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     left: 20px;
     margin: 0;
 }
 
-#topMenu > li > ul > li {
+#topMenu>li>ul>li {
     padding: 10px 0px 10px 0px;
 }
-#topMenu > li > ul > li > a {
+
+#topMenu>li>ul>li>a {
     display: block;
     margin: 10px auto;
     text-align: center;
@@ -101,11 +102,12 @@ nav {
     color: #000;
 }
 
-#topMenu > li:hover > ul {
+#topMenu>li:hover>ul {
     display: block;
     z-index: 10;
 }
-#topMenu > li > ul > li > a:hover {
+
+#topMenu>li>ul>li>a:hover {
     color: #07c;
 }
 
@@ -119,11 +121,11 @@ nav {
     overflow: hidden;
 }
 
-#slides{
+#slides {
     position: absolute;
 }
 
-#slides > img {
+#slides>img {
     width: 100%;
     /* float: left; */
 }
@@ -138,21 +140,23 @@ nav {
     background-color: transparent;
     color: #000;
     font-size: 24px;
-    opacity: 0.5;
+    opacity: 1;
 }
-#prev{
+
+#prev {
     left: 0;
 }
-#next{
+
+#next {
     right: 0;
 }
-#slides button:hover{
+
+#slides button:hover {
     background-color: rgba(0, 0, 0, 0.301);
     color: #fff;
     opacity: 1;
     cursor: pointer;
 }
-
 
 /* contents */
 
@@ -161,12 +165,83 @@ nav {
     height: 300px;
 }
 
+/* 탭메뉴 */
+
 #tabMenu {
     float: left;
     width: 600px;
     height: 100%;
-    background-color: violet;
+    /* background-color: violet; */
+    margin-top: 10px;
 }
+
+#tabMenu input[type="radio"] {
+    display: none;
+}
+
+#tabMenu label {
+    display: inline-block;
+    margin: 0 0;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent;
+}
+
+#tabMenu label:hover {
+    color: #222;
+    cursor: pointer;
+}
+
+#tabMenu input:checked+label {
+    color: #b00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+
+.tabContent {
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+}
+
+.tabContent h2 {
+    display: none;
+}
+
+#notice ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+#notice ul li {
+    position: relative;
+    font-size: 16px;
+    line-height: 2.5;
+}
+#notice ul li::after{
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    left: 0px;
+    height: 1px;
+    content: " ";
+    display: block;
+    /* width: 540px; */
+    background-color: #aaa;
+}
+
+#gallery ul li {
+    display: inline;
+}
+
+#tab1:checked ~ #notice,
+#tab2:checked ~ #gallery {
+    display: block;
+}
+
+/* 퀵링크 */
 
 #links {
     float: right;
