@@ -32,12 +32,14 @@ header {
     float: left;
     width: 250px;
     height: 100px;
-    padding-left: 20px;
+    /* padding-left: 40px; */
     line-height: 100px;
 }
 
 #logo h1 {
     padding: auto;
+    padding-left: 40px;
+
     font-family: 'Tangerine', cursive;
     /* font-weight: 7000; */
     font-size: 50px;
@@ -220,9 +222,21 @@ nav {
     font-size: 16px;
     line-height: 2.5;
 }
+#notice ul li::before{
+    position: absolute;
+    top: -0.5px;
+    right: 30px;
+    left: 0px;
+    height: 1px;
+    content: " ";
+    display: block;
+    /* width: 540px; */
+    background-color: #aaa;
+}
+
 #notice ul li::after{
     position: absolute;
-    bottom: 0px;
+    bottom: -0.5px;
     right: 30px;
     left: 0px;
     height: 1px;
